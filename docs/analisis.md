@@ -1,0 +1,3 @@
+# Análisis técnico
+
+*TODO:* Añadir
