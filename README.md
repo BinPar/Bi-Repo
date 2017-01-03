@@ -1,8 +1,8 @@
 # Nombre del proyecto
 
 - [ ] [Breafing](./docs/breafing.md)
-   - [ ] [Alcance funcional](./docs/alcance.md)
-      - [ ] Wireframe
+  - [ ] [Alcance funcional](./docs/alcance.md)
+     - [ ] Wireframe
          - [ ] Presentación Wireframe
             - [ ] [Breafing Look & Feel](./docs/lookFeel.md)
                - [ ] [Análisis](./docs/analisis.md)
