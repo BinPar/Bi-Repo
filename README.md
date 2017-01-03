@@ -2,11 +2,11 @@
 
 ## Fase 1: Definición
 
-1. [ ] [Breafing](./docs/breafing.md)
-2. [ ] [Alcance funcional](./docs/alcance.md)
-3. [ ] Wireframe
-4. [ ] Presentación Wireframe
-5. [ ] Modificaciones Wireframe
+- [ ] [Breafing](./docs/breafing.md)
+ - [ ] [Alcance funcional](./docs/alcance.md)
+  - [ ] Wireframe
+   - [ ] Presentación Wireframe
+    - [ ] Modificaciones Wireframe
    
 ## Fase 2: Diseño
  
