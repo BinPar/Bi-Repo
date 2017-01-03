@@ -9,7 +9,7 @@
     - [ ] [Breafing Look & Feel](./docs/lookFeel.md)
      - [ ] Arte Final
       - [ ] Presentación Arte Final
-       - [ ] Maquetación
+       - [ ] Maquetación
         - [ ] Programación Cliente
          - [ ] [Deploy](./docs/deploy.md)
          - [ ] [Backups](./docs/backups.md)
