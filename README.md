@@ -15,7 +15,7 @@
 - [ ] [Breafing Look & Feel](./docs/lookFeel.md)
   - [ ] Arte Final
     - [ ] Presentación Arte Final
-     - [ ] Maquetación
+      - [ ] Maquetación
 
 ## Fase 3: Implemetación
 
