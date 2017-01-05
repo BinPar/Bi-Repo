@@ -1,3 +1,3 @@
-# Breafing look and feel
+# Briefing look and feel
 
 *TODO:* Añadir
