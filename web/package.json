@@ -1,0 +1,25 @@
+{
+  "name": "EditorPosters",
+  "private": true,
+  "scripts": {
+    "start": "npm install;meteor --settings ./private/settings.json",
+    "NPM Install": "npm install"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "bcrypt": "^0.8.7",
+    "casual": "^1.5.3",
+    "connect-busboy": "0.0.2",
+    "fibers": "^1.0.14",
+    "mobile-detect": "^1.3.3",
+    "moment": "^2.14.1",
+    "mongodb": "^2.2.10",
+    "react": "^15.1.0",
+    "react-custom-scrollbars": "^4.0.1",
+    "react-dom": "^15.4.2",
+    "react-mounter": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.19.0"
+  }
+}

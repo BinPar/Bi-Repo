@@ -1,0 +1,196 @@
+@import "variables"
+@import "vars"
+@import "icons"
+
+#mainHeader
+	background-color C-SECONDARY-DARK
+	text-align center
+	@extend .FLEX-ROW-STRETCH
+	padding-right 70px
+
+	.mainLogoHolder
+		flex 1
+		order 2
+	.userZone
+		order 1
+		flex 0 0 auto
+
+		&.admin
+			padding 10px 70px 10px 20px
+
+	.selectSubsidiary
+		order 3
+		flex 0 0 auto
+
+.mainLogo
+	display block
+	max-height (H-HEADER - 20px)
+	width auto
+	margin 10px auto
+
+
+.userZone
+	height H-HEADER
+	text-align left
+	padding 10px 20px
+
+	button
+		width auto
+		height 100%
+		position relative
+		text-align right
+
+		.img
+			height 100%
+			border-radius 50%
+
+
+
+.userNav
+	background-color WHITE
+	padding-bottom 30px
+	position absolute
+	text-align left
+	width auto
+	left 0
+	top 0
+
+	.something
+		background-color C-SECONDARY-DARKER
+		height H-HEADER
+
+		p
+			margin-left 60px
+			color white
+			line-height H-HEADER
+
+		.username
+			position relative
+			.badge
+				transform translate(-40%, 140%)
+
+	.link
+		display block
+		position relative
+		margin 0 60px
+		font-size 13px
+		padding-right 10px
+		color C-SECONDARY
+
+		&:first-of-type
+			margin-top 20px
+
+
+
+.mainNav
+	position fixed
+	width 70px
+	height H-HEADER
+	right 0
+	top 0
+	text-align right
+	padding 10px 20px
+
+	button
+		margin 0 0 0 auto
+		text-align right
+
+		i
+			display block
+			float right
+			height (H-HEADER - 20px)
+			width (H-HEADER - 20px)
+			font-size 0
+			@extend .HAMBURGER
+
+.navigation
+	position fixed
+	top 0
+	right 0
+	height 100%
+	text-align center
+	width 100%
+	opacity 1
+	background-color rgba(255,255,255, .9)
+
+	animation fullFixed_topRight .6s ease-out
+
+	@keyframes fullFixed_topRight
+		0%
+			border-radius 0 0 100% 100%
+			opacity 0.1
+			height 0%
+			width 0%
+		40%
+			opacity .2
+			height 10%
+			width 100%
+			border-radius 0 0 100% 100%
+
+.linksHolder
+	display inline-block
+	top 50%
+	left 50%
+	position absolute
+	transform translate(-50%, -70%)
+
+	.link
+		@extend .FONT-THIN
+		color C-SECONDARY
+		padding 10px 20px
+		line-height 1em
+		font-weight 100 !important
+		font-size 28px
+		display block
+		margin 10px auto
+		&:hover
+		&.active
+			color C-SECONDARY-ALTERN
+
+.selectSubsidiary
+	//right 80px
+	height H-HEADER
+	width H-HEADER
+	padding 0
+	
+	.select
+		display block
+		margin 0
+		padding 0
+
+		&::after
+			display none
+		&.folded
+			&::after
+				display none
+			
+		.option
+		.placeholder
+			padding 0
+			margin 10px
+			display block
+			height (H-HEADER - 20px)
+			width (H-HEADER - 20px)
+			border-radius 50%
+
+		.optionHolder
+			padding 0
+			top -10px
+			left 0
+			border-radius H-HEADER
+			background-color C-BACKGROUND-DARKER
+		.flag
+			height 100%
+			border-radius 50%
+			font-size 0
+			background-size auto 100%
+			background-position center
+
+			&.esp
+				background-image url('/img/flag-esp.svg')
+			&.arg
+				background-image url('/img/flag-arg.svg')
+			&.co
+				background-image url('/img/flag-col.svg')
+			&.mex
+				background-image url('/img/flag-mex.svg')

@@ -1,0 +1,44 @@
+// VARIABLES
+
+// EXTENSIONS
+
+	// layout
+	
+		.FULL-FIXED
+			position fixed
+			top 0
+			left 0
+			right 0
+			bottom 0
+
+		.FULL-REL
+			position relative
+			width 100%
+
+	// flexbox
+	
+		.FLEX-ROW
+			display flex
+			flex-direction row
+
+		.FLEX-COL
+			display flex
+			flex-direction column
+			
+		.FLEX-ROW-AROUND
+			@extend .FLEX-ROW
+			flex-wrap nowrap
+			justify-content space-around
+			align-items center
+
+		.FLEX-ROW-STRETCH
+			@extend .FLEX-ROW
+			flex-wrap nowrap
+			justify-content flex-start
+			align-items stretch
+
+		.FLEX-COL-START-STRETCH
+			@extend .FLEX-COL
+			flex 1 auto
+			justify-content flex-start
+			align-items stretch

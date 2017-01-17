@@ -1,0 +1,15 @@
+{
+  "Autor":"BinPar Team S.L.",
+  "showTablePermissionWarnings": true,
+  "showTableFixturesWarnings": true,
+  "showAPIDetails": true,
+  "public": {
+    "title": "Editor Posters",
+    "reactRender": true,
+    "reactRenderBenchmark": false,
+    "displayPreprocessor": false
+  },
+  "private": {
+    "filesBucketName": "fs"
+  }
+}

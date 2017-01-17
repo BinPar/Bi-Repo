@@ -1,0 +1,286 @@
+@import "reset"
+
+// VARIABLES
+
+COLOR-BLUE-MED = #56B2C7
+COLOR-BLUE-DARK = #65A5BE
+COLOR-BLUE-DARKER = #107A92
+
+COLOR-BLUE-LIGHT1 = #C0E4EF
+COLOR-BLUE-LIGHT2 = #C6EBF4
+COLOR-BLUE-LIGHT3 = #D0F1F9
+COLOR-BLUE-LIGHT4 = #D9F4FB
+
+COLOR-PINK-MED = #FB718F
+COLOR-PINK-LIGHT = #F38AA1
+COLOR-PINK-LIGHTER = #FDD7E0
+COLOR-PINK-LIGHTEST = #FFE2E9
+
+COLOR-GREEN-LIGHT = #D9F9FB
+COLOR-GREEN-MED = #C8F4F7
+
+COLOR-WHITE = #FFFFFF
+COLOR-BLACK = #000000
+
+COLOR-GREY-DARK = #565656
+COLOR-GREY-MED-DARK = #777777
+COLOR-GREY-MED-LIGHT = #BBBBBB
+COLOR-GREY-MED = #EEEEEE
+COLOR-GREY-LESSLIGHT = #EAEAEA
+COLOR-GREY-CCC = #CCCCCC
+COLOR-GREY-LIGHT = #F1F1F1
+COLOR-GREY-LIGHTER = #F9F9F9
+
+C-BACKGROUND-ACCENT = COLOR-WHITE
+C-BACKGROUND = COLOR-GREY-LIGHTER
+C-BACKGROUND-DARKER = COLOR-GREY-LIGHT
+
+C-MAIN = COLOR-BLUE-DARKER
+
+C-ALERT = COLOR-PINK-MED
+
+C-SECONDARY = COLOR-BLUE-MED
+C-SECONDARY-BRIGHT = #B2E8f3
+C-SECONDARY-LIGHT = #DCF9FF
+C-SECONDARY-DARK = #3099B1
+C-SECONDARY-DARKER = #107A92
+
+C-SECONDARY-ALTERN-LIGHT = #FFF5E4
+C-SECONDARY-ALTERN = #F5DEB3
+C-SECONDARY-ALTERN-DARK = #EFD19A
+C-SECONDARY-ALTERN-DARKER = #ECC885
+
+H-FIELD = 50px
+H-ICON = 30px
+
+H-HEADER = 50px
+W-SIDEBAR = 280px
+W-LOGO = 170px
+
+Z-POPUP = 999
+
+Z-NAV-ICON = 6
+Z-HEADER = 5
+
+Z-SIDEBAR = 2
+Z-PAGE = 1
+
+Z-PAGE-SHADOW = 4
+Z-WIDGET-TYPE = 3
+Z-WIDGET-SEARCH = 2
+Z-PAGE-HEADER-SHADOW = Z-WIDGET-SEARCH
+Z-WIDGET-CONFIG = 1
+
+FONT-FAMILY = 'Roboto', sans-serif
+
+W-DESK-S = 992px
+
+// layout extensions
+
+
+// end layout extensions
+
+.TRANS-FAST
+	transition all .2s ease-out
+.TRANS-DEF
+	transition all .3s ease-out
+
+.HAMBURGER
+	position relative
+	@extend .TRANS-FAST
+
+	&::before
+	&::after
+		content ''
+		display block
+		position absolute
+		width 100%
+		height 2px
+		left 50%
+		background-color WHITE
+		@extend .TRANS-FAST
+
+	&::before
+		transform translate(-50%, -50%)
+		top 35%
+
+	&::after
+		transform translate(-50%, -50%)
+		top 65%
+
+
+	&.close
+		&::before
+		&::after
+			background-color C-SECONDARY
+		&::before
+			transform translate(-50%, -50%) rotate(-45deg)
+			top 50%
+
+		&::after
+			transform translate(-50%, -50%) rotate(45deg)
+			top 50%
+		&:hover
+			&::after
+			&::before
+				top 50%
+				background-color C-SECONDARY
+
+	@media screen and (min-height W-DESK-S)
+		&::before
+		&::after
+			background-color C-SECONDARY-LIGHT
+		&:hover
+			&::before
+				background-color WHITE
+				top 20%
+			&::after
+				background-color WHITE
+				top 80%
+
+
+
+
+// EXTENSIONS
+
+.afterShadow
+	position relative
+	overflow hidden
+	&::after
+		position absolute
+		content ''
+		pointer-events none
+		display block
+		top 100%
+		left 0
+		width 100%
+		box-shadow 0 0 30px rgba(C-SECONDARY-ALTERN-DARKER, 1)
+		height 20px
+
+.beforeShadow
+	position relative
+	overflow hidden
+	&::before
+		position absolute
+		content ''
+		pointer-events none
+		display block
+		bottom 100%
+		left 0
+		width 100%
+		box-shadow 0 0 30px rgba(C-SECONDARY-ALTERN-DARKER, 1)
+		height 20px
+
+
+.fullHeightWidth
+	top 0
+	left 0
+	right 0
+	bottom 0
+
+.absoluteCentered
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+
+.FONT-THIN
+	font-family FONT-FAMILY
+	font-weight 100
+.FONT-LIGHT
+	font-family FONT-FAMILY
+	font-weight 300
+.FONT-MED
+	font-family FONT-FAMILY
+	font-weight 400
+.FONT-BOLD
+	font-family FONT-FAMILY
+	font-weight 500
+
+.FONT-DEF
+	font-size 16px
+	letter-spacing 0.01em
+	line-height 1.6em
+
+.fontBig
+	font-size 30px
+	letter-spacing -0.05em
+	font-weight 100
+
+.currency
+	.currencySymbol
+		display inline-block
+		font-size 75%
+		vertical-align top
+		margin -0.06em 0 0 0.1em
+
+.ABS-TALL
+	position absolute
+	top 0
+	bottom 0
+
+.ABS-TALL-LEFT
+	@extend .ABS-TALL
+	left 0
+
+.ABS-TALL-RIGHT
+	@extend .ABS-TALL
+	right 0
+
+.FULL-REL
+	position relative
+	width 100%
+	height 100%
+
+
+.NO-SCROLL
+	overflow hidden
+
+.FLEX-HORIZONTAL-START
+	display flex
+	flex-flow row nowrap
+	justify-content flex-start
+	align-items flex-start
+
+.FLEX-HORIZONTAL-WRAP-START
+	display flex
+	flex-flow row wrap
+	justify-content flex-start
+	align-items flex-start
+
+.FLEX-HORIZONTAL-CENTER
+	display flex
+	flex-flow row nowrap
+	justify-content flex-start
+	align-items center
+
+.FLEX-HORIZONTAL-STRETCHED
+	display flex
+	flex-flow row nowrap
+	justify-content flex-start
+	align-items stretch
+
+.FLEX-VERTICAL-STRETCHED
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items stretch
+
+.CLEARFIX
+	&::after
+		content ''
+		display block
+		clear both
+
+.clearfix
+	&::after
+		content ''
+		display block
+		clear both
+
+.CENTERED
+	border thin solid blue
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)

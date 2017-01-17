@@ -1,0 +1,83 @@
+@import "variables"
+@import "vars"
+
+// VARIABLES
+
+FONT-FAMILY = 'Roboto', sans-serif
+
+FONT-WEIGHT-THIN = 100
+FONT-WEIGHT-DEF = 300
+FONT-WEIGHT-MED = 400
+FONT-WEIGHT-BOLD = 500
+
+FONT-SIZE = 16px
+
+LETTER-SP = 0.01em
+
+LINE-HEIGHT-DEF = 1.6em
+
+// EXTENSIONS
+
+.FONT-DEF
+	font-family FONT-FAMILY
+	font-weight FONT-WEIGHT-DEF
+	font-size FONT-SIZE
+	letter-spacing LETTER-SP
+	line-height LINE-HEIGHT-DEF
+	color COLOR-GREY-DARK
+
+.FONT-BIG
+	font-size (FONT-SIZE * 2)
+	letter-spacing -(LETTER-SP * 5)
+	font-weight FONT-WEIGHT-THIN
+
+.CURRENCY-SIGN
+	font-size (FONT-SIZE - 4px)
+
+// STRUCTURE
+
+body
+	@extend .FONT-DEF
+
+h2
+h3
+	@extend .FONT-DEF
+	text-align left
+	line-height 40px
+	padding 10px 30px
+	font-weight FONT-WEIGHT-THIN
+h2
+	font-size (FONT-SIZE * 1.5)
+h3
+	font-size ((FONT-SIZE * 1.5) - 2px)
+h4
+	font-weight FONT-WEIGHT-THIN
+
+.campaignItem
+	line-height 1.3em
+	p
+		color COLOR-GREY-DARK
+		font-size (FONT-SIZE - 5px)
+		font-weight FONT-WEIGHT-MED
+
+	.link
+		font-size (FONT-SIZE - 2px)
+		font-weight FONT-WEIGHT-DEF
+
+.itemListHeader
+	.inner
+		span
+			font-weight FONT-WEIGHT-MED
+			font-size (FONT-SIZE - 5px)
+			text-transform uppercase
+			color COLOR-GREY-MED-DARK
+			//opacity .5
+
+button
+input
+select
+textarea
+	@extend .FONT-DEF
+
+.button
+	font-weight FONT-WEIGHT-THIN

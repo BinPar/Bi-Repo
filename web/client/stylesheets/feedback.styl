@@ -1,0 +1,14 @@
+@import "variables.styl"
+
+.message
+	width auto
+	display block
+	color COLOR-GREY-CCC
+	@extend .FONT-DEF, .FONT-THIN
+	&.error
+		color COLOR-PINK-LIGHT
+	&.success
+		color COLOR-GREEN-MED
+	&.center
+		text-align center
+		width 100%

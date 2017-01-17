@@ -1,0 +1,142 @@
+@import "variables"
+
+#profitData
+	display block
+	height 100%
+	position absolute
+	top 0
+	left 0
+	bottom 0
+
+
+.column
+	padding 0 30px
+
+.barGraphic
+	width 100%
+	height 100%
+	display flex
+	justify-content space-between
+	align-items center
+	flex-direction row
+	flex-wrap nowrap
+
+	.col
+		flex 1 auto
+		padding 0 10px
+		height 100%
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+
+		.row
+			width 100%
+			background-color C-SECONDARY
+			min-width 2px
+			border-radius 2px
+			font-size 0
+			animation barGraphicBar .6s ease-out
+
+			@keyframes barGraphicBar
+				0%
+					height 0
+#billsChart
+	flex 1 1
+	display flex
+	flex-direction column
+
+	.chartInner
+		margin auto
+		height 100%
+		width 100%
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items stretch
+		padding 20px 0 50px 0
+		
+	.column
+		flex 1 1 auto
+		min-width 0
+		width auto
+		max-width 100px
+		padding 0 10px
+		display flex
+		flex-direction column-reverse
+		justify-content flex-end
+		align-items stretch
+		position relative
+		
+		i
+		em
+			display block
+			position absolute
+			width 100%
+			text-align center
+			opacity 0
+			left 0
+			text-transform uppercase
+			font-style normal
+			@extend .TRANS-DEF
+
+		i
+			top 90%
+			font-size 12px
+
+		em
+			bottom 90%
+			font-size 12px
+			
+		.range
+			background-color rgba(C-BACKGROUND-DARKER, .5)
+			margin 1px 0 0 0
+			padding 0 3px
+			flex 1
+			display flex
+			flex-direction column
+			justify-content flex-end
+			align-items stretch
+			
+			&:first-of-type
+				padding-bottom 3px
+				border-bottom-left-radius 5px
+				border-bottom-right-radius 5px
+
+				.amount
+					&:last-of-type
+						border-bottom-left-radius 3px
+						border-bottom-right-radius 3px
+
+			&:last-of-type
+				padding-top 3px
+				border-top-left-radius 5px
+				border-top-right-radius 5px
+				
+				
+			.amount
+				flex 0 0 auto
+
+				&::nth-child(2)
+				&::nth-child(3)
+					margin-top 3px
+
+				&.received
+					background-color C-SECONDARY-BRIGHT
+				&.full
+					background-color COLOR-GREEN-MED
+					height 100%
+					flex 1 1 auto
+					
+				&.pending
+					border-top-left-radius 3px
+					border-top-right-radius 3px
+					background-color COLOR-GREEN-LIGHT
+
+		&:hover
+			em
+				bottom 100%
+				opacity 1
+			i
+				top 100%
+				opacity 1

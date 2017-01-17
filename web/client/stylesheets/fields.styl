@@ -1,0 +1,216 @@
+@import "variables"
+
+button
+input
+select
+textarea
+	-webkit-appearance none
+	-moz-appearance none
+	border-radius 0
+	background-color transparent
+	border none
+	outline none
+	resize none
+
+
+.form
+	width 100%
+	@extend .CLEARFIX
+
+.field
+	width 100%
+	position relative
+	@extend .TRANS-DEF
+	.input
+	.button
+		@extend .TRANS-DEF
+
+
+	label
+		display block
+		width 100%
+
+.input
+	@extend .TRANS-DEF
+	height H-FIELD
+	display block
+	width 100%
+
+.button
+	@extend .TRANS-DEF
+	height H-FIELD
+	display inline-block
+	width auto
+	padding 0 20px
+
+.input
+	background-color WHITE
+	padding 0 20px
+
+	&:focus
+	&:active
+	&:placeholder-shown
+		color: BLACK
+		&:focus
+			color: BLACK
+
+	&::-webkit-input-placeholder
+		color C-SECONDARY-BRIGHT
+
+	&:-ms-input-placeholder
+		color C-SECONDARY-BRIGHT
+
+	&::-moz-placeholder
+		color C-SECONDARY-BRIGHT
+
+	&:-moz-placeholder
+		color C-SECONDARY-BRIGHT
+		opacity: 1
+
+	&[type=checkbox]
+		height H-ICON
+		width H-ICON
+		padding 0
+		cursor pointer
+
+
+
+.button
+	font-size 1.1em
+	cursor pointer
+	transition all .3s ease-out
+
+	&.linear
+		border 1px solid C-SECONDARY
+		background-color transparent
+		color BLUE-DARK
+		&.active
+		&:hover
+			border-color WHITE
+			color WHITE
+
+.textarea
+	min-height 130px
+	width 100%
+	height auto
+	padding 10px 20px
+
+.button
+.input
+	&.bordered
+		line-height 1em
+		border-radius 10px
+		&.active
+		&:hover
+			border-radius 15px
+
+	&.activePink
+		background-color C-BACKGROUND
+		color COLOR-GREY-MED-DARK
+		&.active
+			background-color COLOR-PINK-LIGHT
+			color COLOR-WHITE
+		&:hover
+			background-color COLOR-PINK-MED
+			color COLOR-WHITE
+
+	&.linear
+		border thin solid
+		background-color transparent
+
+		&.green
+			border-color C-SECONDARY
+			color C-SECONDARY
+		&.red
+			border-color COLOR-PINK-LIGHT
+			color COLOR-PINK-LIGHT
+			
+			
+.optionHolder
+	display inline-block
+	position absolute
+	padding 0
+	top -5px
+	left 0
+	max-height 600px
+	width auto
+	overflow hidden
+	min-width 100%
+	border-radius 5px
+	background-color C-SECONDARY-ALTERN-DARK
+	color C-SECONDARY-ALTERN-LIGHT
+	@extend .TRANS-DEF
+	animation selectOpen .3s ease-out
+	
+	@keyframes selectOpen
+		0%
+			opacity 0
+			max-height 30px
+	>div
+		padding 0 15px
+		cursor pointer
+		white-space nowrap
+		&:first-of-type
+			padding-top 5px
+		&:last-of-type
+			padding-bottom 5px
+
+		&.active
+		&:hover
+			color C-SECONDARY
+			background-color C-SECONDARY-ALTERN-DARKER
+
+.select
+	display inline-block
+	vertical-align top
+	border-radius 5px
+	max-height 30px
+	line-height 30px
+	padding 0
+	margin 10px 10px 0 10px
+	text-align left
+	position relative
+	@extend .TRANS-DEF
+	
+	.placeholder
+		padding 0 (H-ICON + 5px) 0 15px
+		@extend .TRANS-DEF
+	
+	&.folded
+		&::after
+			position absolute
+			pointer-events none
+			right 10px
+			top 50%
+			margin-top -10px
+			opacity .4
+
+		&:hover
+			&::after
+				opacity 1
+
+		.placeholder
+			cursor pointer
+		
+		.optionHolder
+			display none
+			
+	&.search
+		
+		.optionHolder
+			background-color C-SECONDARY-ALTERN
+			top 33px
+
+			>div
+				color C-SECONDARY-ALTERN-DARKER
+				&.active
+				&:hover
+					color C-SECONDARY
+					background-color C-SECONDARY-ALTERN-DARKER
+
+
+.userData
+	.button
+		&.red
+			margin 20px 20px 0 auto
+			display block

@@ -1,0 +1,92 @@
+@import "vars"
+@import "variables"
+
+#billUpload
+	.sectionContent
+		padding 20px
+		width 100%
+		max-width (W-DESK-S + 40px)
+		margin 0 auto
+
+.droppedBillData
+	flex 0 auto
+	@extend .FLEX-ROW-STRETCH
+	flex-wrap wrap
+	justify-content space-between
+
+	.field
+		background-color C-BACKGROUND
+		flex 0 auto
+		width calc(50% - 10px)
+		margin-bottom 20px
+		@extend .FLEX-ROW-STRETCH
+		border-radius 10px
+
+		align-items center
+
+		label
+			flex 0 0 auto
+			width auto
+			color COLOR-GREY-CCC
+			padding-left 15px
+
+		.input
+			flex 1 100%
+			background-color transparent
+
+
+		&.button
+			flex 1 100%
+			display block
+			background-color transparent
+			text-align right
+
+			.button
+				border thin solid C-SECONDARY
+				color C-SECONDARY
+				padding 0 20px
+				border-radius 10px
+				display inline-block
+				width auto
+
+				&:hover
+					color white
+					background-color C-SECONDARY
+					border-radius 15px
+
+
+.dropZone
+	flex 1
+	@extend .FLEX-COL-START-STRETCH
+
+.innerDropArea
+	border 4px dashed COLOR-WHITE
+	border-radius 10px
+	flex 1 auto
+	@extend .FLEX-COL, .TRANS-DEF
+	justify-content center
+
+.dropArea
+	background-color C-BACKGROUND
+	padding 30px
+	cursor pointer
+	margin-bottom 20px
+	border-radius 10px
+	flex 1 auto
+	@extend .FLEX-COL-START-STRETCH, .TRANS-DEF
+
+	&:hover
+		background-color C-SECONDARY-ALTERN-LIGHT
+		.innerDropArea
+			border 4px dashed C-SECONDARY-ALTERN
+
+.uploading
+	text-align center
+
+	.img
+		max-width 60px
+		border-radius 5px
+		border thin solid C-SECONDARY-ALTERN
+		margin 20px auto
+		background-color COLOR-WHITE
+

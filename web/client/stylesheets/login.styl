@@ -1,0 +1,72 @@
+@import "vars"
+@import "variables"
+
+#login
+	background-color C-SECONDARY-DARK
+	@extend .FULL-FIXED
+	text-align center
+	color COLOR-WHITE
+	
+	>.row
+		@extend .absoluteCentered
+		width 100%
+		height auto
+		min-height 600px
+		max-width W-DESK-S
+	
+	.logo
+		max-width 300px
+	
+	h2
+		text-align center
+		line-height 1em
+		color COLOR-WHITE
+	
+	.coverLogin
+		background-color C-SECONDARY-DARKER
+		max-width 500px
+		margin 0 auto
+		padding 20px
+		.field
+			margin-top 20px
+		.input
+			border-radius 3px
+		label
+			margin-bottom 10px
+			text-align left
+		
+		.checkbox
+			padding 10px 0
+			@extend .FLEX-HORIZONTAL-CENTER
+			flex-direction row-reverse
+			label
+				padding-left 10px
+				margin-bottom 0
+			
+			.iconHolder
+				display none
+			.input
+				background-color C-SECONDARY
+				&:checked
+					background-color COLOR-WHITE
+	
+	
+	.horizontal
+		margin 30px auto 0 auto
+		width 100%
+		max-width 500px
+		
+		.button
+			background-color transparent
+			width 50%
+			color C-SECONDARY-LIGHT
+			height (H-FIELD + 10px)
+			
+			&.active
+				background-color C-SECONDARY-DARKER
+				color COLOR-WHITE
+				font-size 1.2em
+
+
+
+

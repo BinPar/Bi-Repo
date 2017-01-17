@@ -1,0 +1,874 @@
+@import "vars"
+@import "variables"
+@import "icons"
+
+body
+	color C-MAIN
+
+h1
+	display block
+	margin 0
+	padding 20px
+	max-width 100%
+
+	.img
+		display block
+		width auto
+		margin 0 auto
+		max-width W-LOGO
+		height auto
+
+
+.button
+	cursor pointer
+	&.bigSelect
+		height (H-FIELD * 1.2)
+		position relative
+
+.row
+	display block
+	width 100%
+	@extend .clearfix
+
+	&.fullHeight
+		position relative
+		height 100%
+
+.col
+	float left
+	display block
+
+	&.by2
+		width (100% / 2)
+	&.by3
+		width (100% / 3)
+	&.by4
+		width (100% / 4)
+	&.by5
+		width (100% / 5)
+	&.by5
+		width (100% / 5)
+	&.by6
+		width (100% / 6)
+	&.hby2
+		height (100% / 2)
+	&.hby3
+		height (100% / 3)
+	&.hby4
+		height (100% / 4)
+	&.hby5
+		height (100% / 5)
+	&.hby5
+		height (100% / 5)
+	&.hby6
+		height (100% / 6)
+
+
+#siteHolder
+	display block
+	background-color C-BACKGROUND
+	position relative
+	height 100%
+	width 100%
+
+.main
+	&.sidebar
+		.view
+			position absolute
+			top H-HEADER
+			left 0
+			right 0
+			bottom 0
+			width auto
+			height auto
+
+.link
+	cursor pointer
+	outline none
+	color C-SECONDARY-DARK
+	text-decoration none
+	@extend .TRANS-DEF
+
+	&.centeredLink
+		color C-MAIN
+		text-align center
+		font-size 1.2em
+		&:hover
+			color COLOR-PINK-MED
+
+.filters
+	text-align center
+	height 40px
+	line-height 40px
+	font-size 13px
+
+	.select
+	.field
+		background-color C-BACKGROUND-DARKER
+		display inline-block
+		vertical-align top
+		border-radius 5px
+		max-height 30px
+		line-height 30px
+		width auto
+		padding 0
+		margin 10px 10px 0 10px
+		text-align left
+		position relative
+		@extend .TRANS-DEF
+		
+		.input
+			font-size inherit
+			height 30px
+			background-color transparent
+			padding 0
+			width 100%
+			display block
+			color inherit
+			
+			
+			&:focus
+			&:active
+			&:placeholder-shown
+				color inherit
+				&:focus
+					color inherit
+			
+			&::-webkit-input-placeholder
+				color COLOR-GREY-CCC
+			
+			&:-ms-input-placeholder
+				color COLOR-GREY-CCC
+			
+			&::-moz-placeholder
+				color COLOR-GREY-CCC
+			
+			&:-moz-placeholder
+				color COLOR-GREY-CCC
+				opacity: 1
+			
+
+
+	.field
+		padding-left 15px
+		.icon
+			right 10px
+
+	.select
+		.field
+			margin 0
+
+	.icon-close
+		color COLOR-PINK-MED
+
+.listItem
+	display block
+	height auto
+
+#login
+	background-color C-SECONDARY-DARK
+	position fixed
+	text-align center
+	color COLOR-WHITE
+
+	>.row
+		@extend .absoluteCentered
+		width 100%
+		height auto
+		min-height 600px
+		max-width W-DESK-S
+
+	.logo
+		max-width 300px
+
+	h2
+		text-align center
+		line-height 1em
+
+	.coverLogin
+		background-color C-SECONDARY-DARKER
+		max-width 500px
+		margin 0 auto
+		padding 20px
+		.field
+			margin-top 20px
+		.input
+			border-radius 3px
+		label
+			margin-bottom 10px
+			text-align left
+
+		.checkbox
+			padding 10px 0
+			@extend .FLEX-HORIZONTAL-CENTER
+			flex-direction row-reverse
+			label
+				padding-left 10px
+				margin-bottom 0
+
+			.iconHolder
+				display none
+			.input
+				background-color C-SECONDARY
+				&:checked
+					background-color COLOR-WHITE
+
+
+	.selectors
+		margin-top 30px
+		width 100%
+		max-width 500px
+
+		.button
+			background-color transparent
+			color C-SECONDARY-LIGHT
+			height (H-FIELD + 10px)
+
+			&.active
+				background-color C-SECONDARY-DARKER
+				color COLOR-WHITE
+				font-size 1.2em
+
+
+
+
+.codeHolder
+	padding 20px
+
+	p
+		background-color C-SECONDARY-ALTERN-DARKER
+		font-family 'Courier New'
+		font-size 1em
+		line-height 1.3em
+		padding 20px 30px
+		color C-MAIN
+
+	button
+		text-align right
+		background-color transparent
+		font-size 12px
+		font-weight 400
+		letter-spacing .05em
+		padding 0 30px
+		width auto
+		margin-left auto
+		margin-right 0
+		display inline-block
+		color white !important
+
+#billing
+	.moduleHolder
+		.sectionContent
+			#billingChart
+				position absolute
+				bottom 70px
+				width 100%
+				top 100px
+
+		.chartInner
+			max-width 500px
+			margin-left auto
+			margin-right auto
+
+	&.view
+		.sectionContent
+			height auto
+			position fixed
+			left W-SIDEBAR
+			right 0
+			padding-right W-SIDEBAR
+			top 120px
+			bottom 0
+
+			#billingChart
+				width 100%
+				height 100%
+				padding 20px 0 50px 0
+
+			.chartInner
+				max-width 800px
+				margin-left auto
+				margin-right auto
+
+.stats
+	border-top thin solid COLOR-GREY-MED
+	color C-SECONDARY
+	margin 20px
+	padding 20px
+	font-weight 300
+
+	h4
+		@extend .FONT-DEF
+		font-size 1.3em
+		width 70%
+		color COLOR-GREY-MED-DARK
+		margin 0 auto 30px auto
+		line-height 1.2em
+	p
+		display block
+		margin 20px auto
+		text-align center
+		font-size .8em
+		line-height 1.1em
+		font-weight 300
+
+		em
+			font-style normal
+			font-size .7em
+			font-weight 400
+			letter-spacing .05em
+			display block
+			color C-SECONDARY-BRIGHT
+			text-transform uppercase
+
+		i
+			display block
+			font-weight 100
+			font-size 2.6em
+			font-style normal
+			color COLOR-PINK-LIGHT
+			letter-spacing -.05em
+			line-height 1em
+
+		&.currency
+			i
+				&::after
+					content '€'
+					display inline-block
+					font-size .5em
+					margin-left .2em
+					margin-right -.2em
+					margin-top .2em
+					vertical-align top
+					line-height 1em
+					font-weight 300
+		&.percent
+			i
+				&::after
+					content '%'
+					display inline-block
+					font-size .5em
+					margin-left .1em
+					margin-right -.1em
+					margin-top .2em
+					vertical-align top
+					line-height 1em
+					font-weight 300
+
+.horizontal
+	display flex
+	flex-flow row nowrap
+	width 50%
+	margin 0 auto
+
+.topSeparator
+	position relative
+	padding-top 20px
+	
+	&::after
+		background-color COLOR-GREY-LIGHT
+		position absolute
+		display block
+		content ''
+		height 1px
+		top 0px
+		left 20px
+		right 20px
+
+.topLeftSeparator
+	position relative
+	padding-top 20px
+
+	&::before
+	&::after
+		background-color COLOR-GREY-LIGHT
+		position absolute
+		display block
+		content ''
+		
+	&::before
+		height 1px
+		top 0
+		left 20px
+		right 20px
+
+	&::after
+		width 1px
+		left 0
+		top 40px
+		bottom 0
+		
+		
+
+.content
+	padding 20px
+
+.userInfo
+	max-width W-DESK-S
+	margin 0 auto
+
+	.avatar
+		height 300px
+		width 300px
+		border thin solid C-BACKGROUND-DARKER
+		border-radius 50%
+		overflow hidden
+		display block
+		margin 0 auto 20px auto
+	p
+		color COLOR-GREY-DARK
+		font-weight 300
+		font-size 14px
+		max-width 300px
+		margin 0 auto
+		@extend .FLEX-HORIZONTAL-START
+
+		strong
+			font-weight 400
+			flex 0 0 40%
+			text-transform uppercase
+			font-size 90%
+			text-align right
+			padding-right 10px
+			color COLOR-GREY-CCC
+
+		.link
+			position relative
+			color C-SECONDARY
+
+			.iconOut
+				position absolute
+				top 0
+				left 100%
+
+.selectAvatar
+	position relative
+	display block
+	width 100%
+	max-width 300px
+	cursor pointer
+	max-height 300px
+	margin 20px auto 0 auto
+
+	.uploadImage
+		display block
+		position absolute
+		border-radius 50%
+		overflow hidden
+		background-color C-SECONDARY
+		opacity 0
+		left 0
+		top 0
+		height 100%
+		width 100%
+		@extend .TRANS-DEF
+		.input
+			height 100%
+			width 100%
+			opacity 0
+
+	&:hover
+		.uploadImage
+			opacity .6
+.userData
+	position relative
+
+	h4
+		display block
+		background-color C-BACKGROUND-DARKER
+		font-size 26px
+		line-height (H-ICON + 20px)
+		padding 0 20px
+		border-radius 3px
+
+	.button
+		&.edit
+			position absolute
+			top 10px
+			right 10px
+			height H-ICON
+			width H-ICON
+			background-color C-SECONDARY
+			opacity .7
+			font-size 0
+			border-radius 5px
+			padding 0
+			color COLOR-WHITE
+
+			&:hover
+				opacity 1
+
+			.icon
+				font-size 22px
+				line-height H-ICON
+				font-weight bold
+
+	p
+		@extend .FONT-DEF, .FONT-LIGHT
+		background-color C-BACKGROUND
+		line-height H-FIELD
+		border-radius 3px
+		font-size 16px
+		flex 1 60%
+		padding 0 20px
+		max-width 60%
+
+		&.password
+			font-size 40px
+			letter-spacing -0.1em
+
+	span
+		@extend .FONT-DEF, .FONT-LIGHT
+		font-size 14px
+		padding-top .16em
+		flex 1 40%
+		padding-right 10px
+		font-style normal
+		text-align right !important
+		display block
+		text-transform uppercase
+		width 100%
+
+	.fauxField
+		padding 10px 20px
+		min-height (H-FIELD + 30px)
+		@extend .FLEX-HORIZONTAL-CENTER
+
+	.passwords
+		flex 1 60%
+		.input
+			margin-bottom 10px
+
+	.input
+		flex 1 60%
+		@extend .FONT-DEF, .FONT-LIGHT
+		font-size 16px
+		background-color COLOR-WHITE
+		border thin solid COLOR-GREY-MED
+		border-radius 3px
+		color COLOR-GREY-DARK
+
+		&[disabled]
+			color rgba(COLOR-GREY-DARK, .3)
+			cursor not-allowed
+			background-color C-BACKGROUND-DARKER
+
+	.fieldButtons
+		padding 0 10px
+		@extend .FLEX-HORIZONTAL-START
+		justify-content flex-end
+
+		.button
+			margin 0 10px
+			flex 0 auto
+			min-width 150px
+
+
+.popUp
+	position fixed
+	background-color rgba(COLOR-BLUE-DARKER, .7)
+	top 0
+	left 0
+	right 0
+	bottom 0
+
+	&.scroll
+		.modal
+			position relative
+			top 0
+			left 0
+			transform none
+			margin 20px auto
+
+	.inner
+		position relative
+		height 100%
+		max-height 100%
+		width 100%
+		@extend .FLEX-COL-START-STRETCH
+
+	.modal
+		position absolute
+		top 50%
+		left 50%
+		height auto
+		width 80%
+		max-width 700px
+		margin 20px
+		background-color COLOR-WHITE
+		transform translate(-50%, -50%)
+		@extend .FLEX-COL-START-STRETCH, .FONT-DEF, .FONT-LIGHT
+
+		header
+			padding-top 10px
+			background-color C-BACKGROUND-DARKER
+			flex 0 0 auto
+
+		.content
+			flex 1 auto
+			color COLOR-GREY-DARK
+			padding 0
+			@extend .FLEX-COL-START-STRETCH
+
+			p
+				padding 20px 30px
+
+		.modalFooter
+			padding 0 10px 10px 10px
+			flex 0 0 auto
+			display flex
+			flex-flow row nowrap
+			justify-content flex-end
+			align-items center
+			
+		.button
+			flex 0 auto
+			width auto
+			display inline-block
+			min-width 80px
+			padding 0 20px
+			margin 10px
+	
+	&.alert
+		header
+			color COLOR-PINK-MED
+		h3
+			text-align center
+			
+		.content
+			text-align center
+			
+#campaignFile
+	top H-HEADER
+	background-color C-BACKGROUND-ACCENT
+	@extend .FLEX-VERTICAL-STRETCHED
+	
+	.sectionHeader
+		background-color C-BACKGROUND
+		
+	.sectionContent
+		flex 1 auto
+
+.campaignData
+	margin 30px auto
+	max-width W-DESK-S
+	@extend .FLEX-HORIZONTAL-START
+	
+	.img
+		flex 0 0 auto
+		width 280px
+		height auto
+
+	.campaignInfo
+		padding 20px
+		position relative
+		flex 1 auto
+		@extend .FLEX-HORIZONTAL-WRAP-START
+		
+		h4
+			font-size 1.6em
+			flex 1 100%
+
+		p
+			flex 0 auto
+			@extend .FONT-DEF, .FONT-LIGHT
+			font-size 14px
+			padding 10px 10px 10px 0
+			
+		.button
+			align-self flex-end
+			width 50%
+			margin 10px 10px 10px 50%
+			
+		.discount
+			flex 1 100%
+			padding 0
+			
+.notificationItem
+	width 100%
+	max-width W-DESK-S
+	@extend .FLEX-HORIZONTAL-CENTER
+	margin 10px auto
+	padding 10px
+	border-radius 3px
+	background-color C-BACKGROUND
+
+	.img
+		height H-ICON
+		border-radius 50%
+		overflow hidden
+		border thin solid COLOR-GREY-LESSLIGHT
+		
+	.date
+		font-size 90%
+		background-color C-SECONDARY
+		margin 0 10px
+		padding 0 5px
+		border-radius 3px
+		color white
+
+	.notification
+		padding 0 10px
+		flex 1 auto
+		
+		strong
+			font-weight 400
+			margin-right .3em
+			
+	.notificationType
+		flex 0 80px
+		text-align right
+		@extend .FONT-LIGHT, .FONT-DEF, .FLEX-HORIZONTAL-CENTER
+		font-size 13px
+		justify-content flex-end
+		p
+			padding-top .1em
+			
+		.icon
+			height (H-ICON / 2)
+			width (H-ICON / 2)
+			margin-right 5px
+			margin-left 5px
+			border-radius 50%
+			
+		&.bill
+			color COLOR-PINK-LIGHT
+			.icon
+				background-color COLOR-PINK-LIGHT
+		&.newUser
+			color COLOR-BLUE-MED
+			.icon
+				background-color COLOR-BLUE-MED
+		&.campaign
+			color C-SECONDARY-ALTERN-DARK
+			.icon
+				background-color C-SECONDARY-ALTERN-DARK
+
+.selectors
+	@extend .FLEX-ROW
+	justify-content center
+	align-items center
+	padding 10px 20px
+	
+	.button
+		max-width 150px
+		margin 10px
+		min-width 80px
+		
+		
+.marginTop
+	margin-top 20px
+.paddedTop
+	padding-top 20px
+
+.badge
+	position absolute
+	display inline-block
+	font-style normal
+	letter-spacing 0
+	font-size 9px
+	text-align center
+
+	&.topLeft
+		top 0
+		left 0
+		transform translate(-70%, -30%)
+
+	&.topRight
+		top 0
+		right 0
+		transform translate(70%, -30%)
+
+	&.bottomLeft
+		bottom 0
+		left 0
+		transform translate(-70%, 30%)
+
+	&.bottomRight
+		bottom 0
+		right 0
+		transform translate(70%, 30%)
+
+
+	&.bubble
+		height 20px
+		min-width 20px
+		padding 0 .03em
+		line-height 20px
+		width auto
+		border-radius 10px
+		animation bubbleIn .6s ease-out
+
+	&.pink
+		background-color C-ALERT
+		color WHITE
+
+	&.text
+		background-color transparent
+		text-transform uppercase
+		padding 0 .03em
+		font-weight 400
+		letter-spacing .1em
+		line-height 1em
+
+		&.yellow
+			color C-SECONDARY-ALTERN
+		&.pink
+			color C-ALERT
+
+
+	@keyframes bubbleIn
+		0%
+			font-size 0
+			color C-ALERT
+			height 0
+			width 0
+			min-width 0
+			opacity 0
+		30%
+			font-size 0
+			color C-ALERT
+			height 0
+			width 0
+			min-width 0
+			opacity 0
+		35%
+			height 20px
+			width 20px
+			min-width 20px
+			color C-ALERT
+
+
+.loader
+	.outer
+		margin 10px auto
+		height H-ICON
+		width H-ICON
+		border 10px solid COLOR-GREY-LESSLIGHT
+		border-radius 50%
+		position relative
+
+		.inner
+			position absolute
+			width 100%
+			height 100%
+			border-radius 50%
+			transform rotate(0deg)
+			animation loader .8s linear infinite
+
+			&::before
+				content ''
+				display block
+				height 6px
+				width 6px
+				position absolute
+				top -7px
+				left 50%
+				border-radius 50%
+				background-color C-SECONDARY
+
+		@keyframes loader
+			0%
+				transform rotate(0deg)
+			100%
+				transform rotate(360deg)

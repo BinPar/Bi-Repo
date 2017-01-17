@@ -1,0 +1,224 @@
+@import "variables"
+@import "vars"
+
+attach = "\e902"
+close = "\e903"
+search = "\e904"
+arrow_down = "\e905"
+expand = "\e906"
+check = "\e907"
+edit = "\e900"
+
+
+@font-face
+	font-family: 'icomoon';
+	src:  url('icons/fonts/icomoon.eot?smn70q');
+	src:  url('icons/fonts/icomoon.eot?smn70q#iefix') format('embedded-opentype'),
+					url('icons/fonts/icomoon.ttf?smn70q') format('truetype'),
+					url('icons/fonts/icomoon.woff?smn70q') format('woff'),
+					url('icons/fonts/icomoon.svg?smn70q#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+.iconFont
+	font-family 'icomoon' !important
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	cursor pointer
+
+	height (H-ICON/3)*2
+	width (H-ICON/3)*2
+	text-align center
+	font-size (H-ICON/3)*2
+	line-height (H-ICON/3)*2
+	@extend .TRANS-FAST
+
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+
+[class^="icon-"]
+[class*=" icon-"]
+	@extend .iconFont
+
+.icon-edit
+	&:before
+		content edit
+
+.icon-attach
+	&:before
+		content attach
+
+.icon-close
+	&:before
+		content close
+
+.icon-search
+	&:before
+		content search
+
+.icon-arrow_down
+	&:before
+		content arrow_down
+
+.icon-expand
+	&:before
+		content expand
+
+.icon-check
+	&:before
+		content check
+
+
+.select
+	&.folded
+		&::after
+			@extend .iconFont
+			content arrow_down !important
+
+	&.search
+		&::after
+			display none
+
+
+.field
+	.icon
+		display block
+		position absolute
+		top 50%
+		right 0
+		transform translate(0%, -50%)
+
+.moduleHolder
+	.iconHolder
+		display inline-block
+		width auto
+
+.iconHolder
+	.icon
+		height H-ICON
+		width H-ICON
+		text-align center
+		font-size 20px
+		line-height H-ICON
+		@extend .TRANS-FAST
+
+	&.pink
+		border-radius 50%
+		background-color COLOR-PINK-LIGHT
+		.icon
+			&::before
+			&::after
+				color WHITE
+	&.plus
+		.icon
+			height H-ICON
+			width H-ICON
+			position relative
+			margin-left auto
+			margin-right 0
+			&::after
+				@extend .TRANS-FAST, .iconFont
+				content expand
+				line-height H-ICON
+
+		&.big
+			position relative
+			display block
+			margin 0 auto
+			overflow hidden
+			height (H-ICON*1.5)
+			width (H-ICON*1.5)
+
+			.icon
+				margin 7px auto
+
+
+	&.goBack
+		height H-ICON
+		width H-ICON
+		background-color C-BACKGROUND-DARKER
+		border thin solid C-BACKGROUND-DARKER
+		border-radius 50%
+		display inline-block
+		vertical-align top
+		margin-top 4px
+		margin-right .3em
+		cursor pointer
+		position relative
+		@extend .TRANS-DEF
+
+		.icon
+			height 6px
+			width 6px
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-35%, -50%) rotate(-45deg)
+			border-left thin solid
+			border-top thin solid
+			border-color C-SECONDARY
+
+		&:hover
+			background-color COLOR-WHITE
+			border thin solid COLOR-GREY-LESSLIGHT
+			.icon
+				border-color COLOR-PINK-MED
+
+	&.close
+		cursor pointer
+		.icon
+			background-color C-BACKGROUND-ACCENT
+			color COLOR-PINK-LIGHT
+			&:hover
+				background-color COLOR-PINK-LIGHT
+				color COLOR-WHITE
+
+	&.check
+		cursor pointer
+		.icon
+			background-color C-BACKGROUND-ACCENT
+			color C-SECONDARY
+			&:hover
+				background-color C-SECONDARY
+				color COLOR-WHITE
+	&.bill
+		cursor pointer
+		.icon
+			background-color C-BACKGROUND-DARKER
+			color COLOR-GREY-MED-DARK
+			&:hover
+				background-color COLOR-GREY-DARK
+				color COLOR-WHITE
+.iconOut
+	display inline-block
+	height (H-ICON / 3)
+	width (H-ICON / 3)
+	background-color C-SECONDARY
+	vertical-align top
+	margin .35em 0 0 .3em
+	border-radius 3px
+
+
+#campaigns
+	.centeredLink
+		.iconHolder
+			.icon
+				&::after
+					display none
+				&::before
+					content '+'
+					display block
+					margin-top 1px
+					margin-left 1px
+#bills
+	.centeredLink
+		.iconHolder
+			transform rotate(180deg)
+
+			.icon
+				&::after
+					content arrow_down

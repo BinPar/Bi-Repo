@@ -1,0 +1,522 @@
+// RESET
+
+*
+  margin 0
+  padding 0
+  border 0
+  border-collapse collapse
+  vertical-align baseline
+  box-sizing border-box
+  font-size 100%
+
+button
+input
+select
+textarea
+  -webkit-appearance none
+  -moz-appearance none
+  border-radius 0
+  background-color transparent
+  border none
+  outline none
+
+  article
+  aside
+  details
+  figcaption
+  figure
+  footer
+  header
+  hgroup
+  menu
+  nav
+  section
+    display block
+
+  ol
+  ul
+  li
+    list-style none
+
+  a
+  button
+  input
+    outline none
+
+  a
+    text-decoration none
+
+HIND-FAMILY = 'Hind', sans-serif
+
+AZUL-CLARO = #0074a7
+AZUL-OSCURO = #1e5c80
+AMARILLO = #ffd400
+GRIS-OSCURO = #7d7d7d
+WHITE = #FFFFFF
+
+TURQUESA-CLARO = #a3f1f0
+TURQUESA-OSCURO = #4ea2aa
+TURQUESA-DARKER = #2f686d
+ROSA = #cd4587
+
+.m-b
+  margin-bottom 50px
+
+.v-align-p
+  width 100%
+  display table
+  margin 0 auto
+
+.v-align-c
+  display table-cell
+  vertical-align middle
+  margin 0 auto
+
+.TITULO
+  float right
+  display table
+
+.TITTLE
+  font-family HIND-FAMILY
+  color TURQUESA-DARKER
+  font-weight 500
+  line-height 1em
+  text-align right
+  display table-cell
+  vertical-align middle
+
+.CLAIM
+  font-family HIND-FAMILY
+  color WHITE
+  float right
+  background ROSA
+  border-radius 7px
+  text-align center
+  z-index 1
+  position absolute
+  right 16px
+  bottom 16px
+
+.FOTO
+  float left
+  img
+    width 100%
+
+.FONDO
+  background linear-gradient(to right, TURQUESA-OSCURO, TURQUESA-CLARO)
+  padding 10px
+  position relative
+
+.TRIANGULO
+  width 0
+  height 0
+  border-style solid
+  border-color transparent transparent AMARILLO transparent
+  position absolute
+  right 0
+  bottom 0
+
+#banner01
+  @extend .FONDO
+  width 300px
+  height 250px
+  .v-align-p
+    height 180px
+    margin-bottom 10px
+  .foto
+    @extend .FOTO
+    width 105px
+  .titulo
+    @extend .TITULO
+    width 165px
+    height 144px
+    margin-left 10px
+
+    h1
+      @extend .TITTLE
+      font-size 18px
+  .claim
+    @extend .CLAIM
+    width 140px
+    height 30px
+    padding 5px
+    font-size 14px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner02
+  @extend .FONDO
+  width 336px
+  height 280px
+  .v-align-p
+    height 215px
+    margin-bottom 10px
+  .foto
+    @extend .FOTO
+    width 140px
+  .titulo
+    @extend .TITULO
+    width 165px
+    height 190px
+    margin-left 10px
+
+    h1
+      @extend .TITTLE
+      font-size 20px
+  .claim
+    @extend .CLAIM
+    width 140px
+    height 30px
+    padding 5px
+    font-size 14px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner03
+  @extend .FONDO
+  width 728px
+  height 90px
+  .v-align-p
+    height 70px
+    float left
+    width 77%
+  .foto
+    @extend .FOTO
+    width 115px
+    height 80px
+    position relative
+    overflow hidden
+    img
+      position absolute
+      left 50%
+      top 96%
+      height auto
+      width 100%
+      -webkit-transform translate(-50%,-50%)
+      -ms-transform translate(-50%,-50%)
+      transform translate(-50%,-50%)
+
+  .titulo
+    @extend .TITULO
+    width 415px
+    height 70px
+    margin-left 15px
+
+    h1
+      @extend .TITTLE
+      font-size 18px
+      text-align left
+  .claim
+    @extend .CLAIM
+    margin-top 32px
+    width 140px
+    height 30px
+    padding 5px
+    font-size 14px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner04
+  @extend .FONDO
+  width 468px
+  height 60px
+  .v-align-p
+    height 40px
+    width 70%
+    float left
+  .titulo
+    @extend .TITULO
+    width 100%
+    height 40px
+
+    h1
+      @extend .TITTLE
+      font-size 13px
+      text-align left
+  .claim
+    @extend .CLAIM
+    width 119px
+    height 28px
+    padding 5px
+    font-size 12px
+    margin-top 6px
+    i
+      padding-left 5px
+      font-size 10px
+  .TRIANGULO
+    border-width 0 0 60px 150px
+
+#banner05
+  @extend .FONDO
+  width 300px
+  height 600px
+  .v-align-p
+    height 100%
+  .foto
+    @extend .FOTO
+    width 230px
+    height 306px
+    position relative
+    float none
+    margin 0 auto
+    overflow hidden
+
+    img
+      position absolute
+  .titulo
+    @extend .TITULO
+    width 100%
+    height 180px
+    float none
+
+    h1
+      @extend .TITTLE
+      font-size 24px
+      text-align center
+  .claim
+    @extend .CLAIM
+    width 160px
+    height 35px
+    padding 5px
+    font-size 16px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner06
+  @extend .FONDO
+  width 320px
+  height 100px
+  .v-align-p
+    height 40px
+    width 100%
+    float left
+  .titulo
+    @extend .TITULO
+    width 60%
+    height 80px
+    float left
+
+    h1
+      @extend .TITTLE
+      font-size 14px
+      text-align left
+  .foto
+    @extend .FOTO
+    width 100px
+    height 90px
+    position relative
+    float right
+    margin 0 auto
+    overflow hidden
+    margin-right 5px1
+
+    img
+      position absolute
+  .claim
+    @extend .CLAIM
+    width 119px
+    height 28px
+    padding 5px
+    font-size 12px
+    margin-top 6px
+    bottom 13px
+    right 13px
+    i
+      padding-left 5px
+      font-size 10px
+  .TRIANGULO
+    border-width 0 0 50px 150px
+
+#banner07
+  @extend .FONDO
+  width 320px
+  height 50px
+  .v-align-p
+    height 30px
+    width 87%
+    float left
+  .titulo
+    @extend .TITULO
+    width 100%
+    height 30px
+
+    h1
+      @extend .TITTLE
+      font-size 11px
+      text-align left
+  .claim
+    @extend .CLAIM
+    width 27px
+    height 25px
+    border-radius 50%
+    padding-top 3px
+    font-size 12px
+    bottom 12px
+    i
+      font-size 10px
+      padding-left 2px
+
+  .TRIANGULO
+    border-width 0 0 35px 110px
+
+#banner08
+  @extend .FONDO
+  width 250px
+  height 250px
+  padding 16px
+  .v-align-p
+    height 179px
+    margin-bottom 10px
+  .titulo
+    @extend .TITULO
+    float left
+    width 100%
+    height 179px
+
+    h1
+      @extend .TITTLE
+      text-align center
+      font-size 23px
+  .claim
+    @extend .CLAIM
+    width 140px
+    height 30px
+    padding 5px
+    font-size 14px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner09
+  @extend .FONDO
+  width 300px
+  height 300px
+  .v-align-p
+    height 230px
+  .foto
+    @extend .FOTO
+    width 165px
+    height 200px
+    position relative
+    float none
+    margin 0 auto
+    overflow hidden
+
+    img
+      position absolute
+  .titulo
+    @extend .TITULO
+    width 100%
+    height 90px
+    float none
+
+    h1
+      @extend .TITTLE
+      font-size 17px
+      text-align center
+  .claim
+    @extend .CLAIM
+    width 140px
+    height 30px
+    padding 5px
+    font-size 14px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner10
+  @extend .FONDO
+  width 400px
+  height 400px
+  padding 15px
+  .v-align-p
+    height 230px
+  .foto
+    @extend .FOTO
+    width 230px
+    height 280px
+    position relative
+    float none
+    margin 0 auto
+    overflow hidden
+
+    img
+      position absolute
+  .titulo
+    @extend .TITULO
+    width 100%
+    height 104px
+    float none
+
+    h1
+      @extend .TITTLE
+      font-size 21px
+      text-align center
+  .claim
+    @extend .CLAIM
+    width 140px
+    height 30px
+    padding 5px
+    font-size 14px
+    i
+      padding-left 5px
+      font-size 12px
+  .TRIANGULO
+    border-width 0 0 90px 190px
+
+#banner11
+  @extend .FONDO
+  width 500px
+  height 500px
+  padding 20px
+  .v-align-p
+    height 100%
+  .foto
+    @extend .FOTO
+    width 270px
+    height 339px
+    position relative
+    float none
+    margin 0 auto
+    overflow hidden
+
+    img
+      position absolute
+  .titulo
+    @extend .TITULO
+    width 100%
+    height 140px
+    float none
+
+    h1
+      @extend .TITTLE
+      font-size 26px
+      line-height 1.3em
+      text-align center
+  .claim
+    @extend .CLAIM
+    width 210px
+    height 40px
+    padding 5px
+    font-size 20px
+    i
+      padding-left 5px
+      font-size 15px
+  .TRIANGULO
+    border-width 0 0 147px 300px

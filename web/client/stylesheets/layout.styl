@@ -1,0 +1,156 @@
+@import "variables"
+@import "icons"
+@import "vars"
+
+body
+	background-color C-BACKGROUND-DARKER
+
+// this is the main layout
+
+#flexSiteHolder
+	@extend .FULL-FIXED, .FLEX-COL
+	overflow hidden
+	
+	#mainHeader
+		flex 0 auto
+		height H-HEADER
+		
+	.mainSection
+		flex 1 auto
+		background-color C-BACKGROUND
+		@extend .FLEX-COL
+
+.view
+	flex 1 auto
+	@extend .FLEX-ROW
+	
+	.pageContent
+		height auto
+		width 100%
+		flex 1 auto
+	
+	&.vertical
+		background-color C-BACKGROUND-ACCENT
+		@extend .FLEX-COL
+		justify-content flex-start
+		align-items stretch
+		
+		.pageContent
+			@extend .FLEX-COL
+			justify-content flex-start
+			align-items stretch
+			
+			.sectionContent
+				@extend .FLEX-COL
+				justify-content flex-start
+				align-items stretch
+				height auto
+				
+
+	&.sidebar
+		background-color C-BACKGROUND-ACCENT
+		justify-content center
+		align-items stretch
+
+		.pageContent
+			@extend .FLEX-ROW
+			justify-content flex-start
+			align-items stretch
+			
+			aside
+				background-color C-BACKGROUND-DARKER
+				flex 0 0 auto
+				width W-SIDEBAR
+				padding 20px
+				text-align center
+				
+			.contentWithSidebar
+				@extend .FLEX-COL
+				justify-content flex-start
+				align-items stretch
+				flex 1 auto
+				
+				.sectionContent
+					@extend .FLEX-COL
+					justify-content flex-start
+					align-items stretch
+		
+	.sectionHeader
+		flex 0 auto
+		h2
+		h3
+			background-color C-BACKGROUND
+
+		.filters
+			height 50px
+			line-height 50px
+
+	.sectionContent
+		flex 1 auto
+		@extend .FLEX-COL
+		justify-content flex-start
+		align-items stretch
+		
+	.itemList
+		flex 1 auto
+		position relative
+		@extend .FLEX-COL-START-STRETCH
+
+.fullFlexCol
+	@extend .FLEX-COL-START-STRETCH
+	
+#notifications
+	.contentWithSidebar
+		flex 1 auto
+		
+.scrollbarHolder
+	flex 1 auto
+	position relative
+	
+	>div
+		position absolute !important
+		width calc(100% - 40px) !important
+		left 20px !important
+		right 20px !important
+
+.dashModule
+	flex 0 1 50%
+	position relative
+
+	&::after
+	&::before
+		content ''
+		display block
+		background-color COLOR-GREY-CCC
+		position absolute
+
+	&:nth-of-type(odd)
+		&::after
+			width 1px
+			height 100%
+			right 0
+			top 0
+
+	&:nth-child(2)
+	&:first-child
+		&::before
+			height 1px
+			width 100%
+			left 0
+			bottom 0
+
+	&.affiliate
+		flex 0 1 100%
+		&::after
+			display none
+
+
+#dashboard
+	background-color C-BACKGROUND
+	.sectionContent
+		flex-flow row wrap
+
+		.dashModule
+			.sectionContent
+				@extend .FLEX-COL-START-STRETCH
+

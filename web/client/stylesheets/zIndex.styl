@@ -1,0 +1,58 @@
+// VARIABLES
+
+Z-NAV = 6
+Z-HAMBURGER = 7
+Z-HEADER = 5
+Z-POPUP = 999
+
+Z-USERZONE = 4
+Z-USERZONE-NAV = 3
+
+Z-SELECT-OPEN = 8
+Z-SELECT-CLOSED = 3
+
+Z-MODULE = 1
+Z-AVATAR-BUTTON = 1
+
+// STRUCTURE
+
+#mainHeader
+	.userZone
+		z-index Z-USERZONE
+		button
+			z-index Z-USERZONE
+		.userNav
+			z-index Z-USERZONE-NAV
+
+	.mainNav
+		z-index Z-NAV
+		button
+			i
+				z-index Z-HAMBURGER
+		.navigation
+			z-index Z-NAV
+
+	.selectSubsidiary
+		.select
+			z-index Z-NAV
+			&.folded
+				z-index Z-HEADER
+
+.filters
+	.select
+	.field
+		z-index Z-SELECT-OPEN
+		&.folded
+			z-index Z-SELECT-CLOSED
+
+.dashModule
+	&::before
+	&::after
+		z-index Z-MODULE
+
+.selectAvatar
+	.uploadImage
+		z-index Z-AVATAR-BUTTON
+
+.popUp
+	z-index Z-POPUP

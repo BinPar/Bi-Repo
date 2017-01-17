@@ -1,0 +1,279 @@
+@import "vars"
+@import "variables"
+@import "icons"
+
+.displayDate
+	@extend .FONT-LIGHT
+	flex 0 auto
+	border-radius 10px
+	padding 3px 10px
+	margin-right 10px
+	font-size 80%
+
+.currency
+	flex 0 0 auto
+	@extend .fontBig
+	line-height 1em
+	display inline-block
+	vertical-align top
+	margin-right 15px
+
+.itemListHeader
+	width 100%
+	.inner
+		padding 15px 30px 10px 30px
+		width 100%
+		margin 0 auto
+		@extend .FLEX-HORIZONTAL-CENTER
+
+		span
+			text-align center
+			flex 0 0 70px
+
+			&.name
+				flex 1 1 auto
+				text-align left
+				padding-left 55px
+
+.pageContent
+	.itemListHeader
+		.inner
+			padding 15px 10px
+			max-width W-DESK-S
+
+.billItem
+	display block
+	padding 10px
+	font-size 100%
+	line-height 1.2em
+	width 100%
+	max-width W-DESK-S
+	margin 0 auto
+	height auto
+
+	.billData
+		@extend .FLEX-ROW-STRETCH
+		align-items center
+		background-color C-BACKGROUND
+		color COLOR-GREY-MED-DARK
+		border-radius 3px
+		padding 10px
+
+		.displayDate
+			background-color COLOR-BLUE-MED
+			color COLOR-WHITE
+
+		.currency
+			font-size 150%
+
+		.user
+			@extend .FLEX-ROW-STRETCH
+			align-items center
+			margin-right 10px
+			flex 0 1 auto
+
+			.img
+				height H-ICON
+				width H-ICON
+				border-radius 50%
+				background-color COLOR-WHITE
+				border thin solid COLOR-GREY-LESSLIGHT
+				margin-right 5px
+				flex 0 0 auto
+
+			.name
+				font-weight 400
+
+		.concept
+			flex 1 auto
+
+		.iconHolder
+			flex 0 auto
+			padding 0 0 0 10px
+
+			&.bill
+				.icon
+					border-radius 3px
+					width (H-ICON - 5px)
+			&.check
+				.icon
+					border-radius 50%
+
+			&.close
+				.icon
+					border-radius 50%
+
+
+	.billComment
+		display block
+		border-bottom-left-radius 3px
+		border-bottom-right-radius 3px
+		height auto
+		max-height none
+		min-height 0
+		@extend .FONT-DEF, .FONT-LIGHT
+		font-style italic
+		padding 20px
+		margin 0
+		font-size 90%
+		letter-spacing .04em
+		line-height 1.1em
+
+	&.approved
+		.billData
+			background-color COLOR-GREEN-LIGHT
+			color COLOR-BLUE-MED
+			border-bottom-left-radius 0
+			border-bottom-right-radius 0
+
+			.displayDate
+				background-color COLOR-GREEN-MED
+				color COLOR-BLUE-MED
+
+			.user
+				.img
+					border-color COLOR-GREEN-MED
+
+			.iconHolder
+				&.bill
+					.icon
+						background-color COLOR-WHITE
+						&:hover
+							background-color COLOR-GREY-DARK
+				&.close
+				&.check
+					pointer-events none
+					.icon
+						background-color COLOR-GREEN-MED
+						color rgba(C-SECONDARY-DARK, .5)
+
+		.billComment
+			background-color rgba(COLOR-GREEN-LIGHT, .3)
+
+	&.rejected
+		.billData
+			background-color COLOR-PINK-LIGHTEST
+			color COLOR-PINK-LIGHT
+			border-bottom-left-radius 0
+			border-bottom-right-radius 0
+
+			.displayDate
+				background-color COLOR-PINK-LIGHTER
+				color COLOR-PINK-LIGHT
+
+			.user
+				.img
+					border-color COLOR-PINK-LIGHTER
+
+			.iconHolder
+				&.bill
+					.icon
+						background-color COLOR-WHITE
+						&:hover
+							background-color COLOR-GREY-DARK
+				&.close
+				&.check
+					pointer-events none
+					.icon
+						background-color COLOR-PINK-LIGHTER
+						color COLOR-PINK-LIGHT
+		.billComment
+			background-color rgba(COLOR-PINK-LIGHT, .1)
+
+
+
+.userItem
+	width 100%
+	display flex
+	flex-flow row nowrap
+	justify-content space-between
+	font-size 14px
+	max-width 630px
+	margin 10px auto
+
+	.userThumb
+		display flex
+		flex-flow row nowrap
+		justify-content flex-start
+		align-items center
+
+		p
+			line-height 1.3em
+			padding 2px 5px 0 15px
+
+
+	.userGraphic
+		flex 1 auto
+		max-width 40%
+
+
+	.userThumbnail
+		flex 0 0 auto
+		height 50px
+		width 50px
+		position relative
+
+		&::before
+			content ''
+			display block
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			border thin solid COLOR-GREY-LIGHT
+			border-radius 50%
+
+		.img
+			width (50px - 10px)
+			height auto
+			position absolute
+			top 5px
+			left 5px
+			border thin solid COLOR-GREY-LESSLIGHT
+			border-radius 50%
+
+.scrollbarHolder
+	.billItem
+	.linkUser
+	.campaignItem
+		&:last-of-type
+			margin-bottom 50px
+
+	.linkUser
+		&:last-of-type
+			display block
+
+.campaignItem
+	width 100%
+	@extend .FLEX-HORIZONTAL-CENTER
+	max-width W-DESK-S
+	margin 0 auto 3px auto
+	background-color COLOR-GREY-LIGHT
+	border-radius 3px
+	padding 10px
+
+	.campaignThumbnail
+		flex 0 0 auto
+		height 40px
+		width 40px
+		border-radius 50%
+		overflow hidden
+		background-color COLOR-WHITE
+		position relative
+		margin-right 5px
+
+		.img
+			@extend .absoluteCentered
+
+	p
+		flex 0 0 70px
+		text-align center
+		padding 0 10px
+
+		&.campaignName
+			flex 1 auto
+			text-align left
+			font-size inherit
+
+
