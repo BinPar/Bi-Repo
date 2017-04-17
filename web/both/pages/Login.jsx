@@ -1,11 +1,4 @@
 import React from 'react';
-import Logo from '../components/basics/Logo';
-import Field from '../components/basics/Field';
-import Form from '../components/basics/Form';
-import Button from '../components/basics/Button';
-import ButtonGroup from '../components/basics/ButtonGroup';
-import Row from '../components/basics/Row';
-import View from '../components/basics/layout/View';
 
 export default class Login extends React.Component {
 
@@ -102,79 +95,9 @@ export default class Login extends React.Component {
 	render() {
 
 		return (
-			<View id="login" className={this.state.loginMode ? 'loginMode' : 'retrievePassMode'}>
-				<Row>
-					<Row>
-						<Logo />
-						<h2>Programa de Afiliados de Editorial Médica Panamericana</h2>
-					</Row>
-					<Row>
-						<ButtonGroup initialIndex={0} className="horizontal">
-							<Button className="" onClick={this.state.loginMode ? '' : this.toggleLoginMode }>
-								Acceder
-							</Button>
-							<Button className="" onClick={this.state.loginMode ? this.toggleLoginMode : ''}>
-								Recordar contraseña
-							</Button>
-						</ButtonGroup>
-					</Row>
-
-					<Row className="coverLogin">
-						{this.state.loginMode ? (
-
-							<Form className="login" ref="loginForm" autoComplete="off" onSubmit={this.onLogin.bind(this)}>
-								<Field
-									type="text"
-									id="email"
-									label="eMail"
-									ref="email"
-									propsInput={{placeholder: "eMail", name: "email"}} />
-								<Field
-									type="password"
-									id="password"
-									label="Contraseña"
-									ref="password"
-									propsInput={{placeholder: "Contraseña", name: "password"}} />
-								<Field
-									type="checkbox"
-									id="rememberMe"
-									className="checkbox"
-									label="Recuérdame"
-									ref="rememberMe"
-									propsInput={{name: "rememberMe"}} />
-								<Field
-									type="submit"
-									id="submit"
-									propsInput={{value: "Conectar"}}
-									disabled={!this.state.enabled} />
-
-								{this.state.error?(
-									<div className="errorLogin" >{this.state.error}</div>
-								):null}
-							</Form>
-
-						) : (
-							<Form className="login" ref="loginForm" autoComplete="off" onSubmit={this.rememberPassword.bind(this)}>
-								<Field
-									type='text'
-									label='eMail'
-									ref='emailRemember'
-									id='email'
-									propsInput={{name: 'email', placeholder: 'eMail'}} />
-								<Field
-									type='submit'
-									id='submit'
-									propsInput={{value: 'Enviar'}}
-									disabled={!this.state.enabled} />
-
-								{this.state.error?(
-									<div className="errorLogin" >{this.state.error}</div>
-								):null}
-							</Form>
-						)}
-					</Row>
-				</Row>
-			</View>
+			<div>
+				<h1>Hola mundo</h1>
+			</div>
 		);
 	}
 }

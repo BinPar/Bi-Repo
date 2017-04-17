@@ -1,15 +1,11 @@
 {
-  "Autor":"BinPar Team S.L.",
-  "showTablePermissionWarnings": true,
-  "showTableFixturesWarnings": true,
-  "showAPIDetails": true,
+  "Autor": "BinPar Team S.L.",
   "public": {
-    "title": "Editor Posters",
-    "reactRender": true,
-    "reactRenderBenchmark": false,
-    "displayPreprocessor": false
+    "title": "Nombre del proyecto"
   },
   "private": {
-    "filesBucketName": "fs"
+    "filesBucketName": "fs",
+    "connectionString": "mongodb://localhost:3001/meteor",
+    "dbPoolSize": 4
   }
 }

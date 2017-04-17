@@ -1,10 +1,5 @@
 import React from 'react';
-
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
-
-import View from '../components/basics/layout/View';
-
-import Scrollbar from '../components/basics/Scrollbar';
 
 export default class Home extends TrackerReact(React.Component) {
 
@@ -20,16 +15,9 @@ export default class Home extends TrackerReact(React.Component) {
 
 	render() {
 		return (
-			<View>
-				<section className="content">
-					<Scrollbar>
-						hey
-					</Scrollbar>
-				</section>
-				<aside>
-					heuy
-				</aside>
-			</View>
+			<div>
+
+			</div>
 		);
 	}
 }

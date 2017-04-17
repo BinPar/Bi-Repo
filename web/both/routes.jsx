@@ -3,7 +3,6 @@ import {mount} from 'react-mounter';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import ThisIsPreview from './pages/ThisIsPreview';
-
 import FlexLayout from './layouts/FlexLayout';
 
 if(Meteor.isClient){
@@ -43,6 +42,14 @@ FlowRouter.route('/', {
 	action(_params) {
 		mount(FlexLayout, {
 			content: props => <Home {...props} />
+		});
+	}
+});
+
+FlowRouter.route('/login', {
+	action(_params) {
+		mount(FlexLayout, {
+			content: props => <Login {...props} />
 		});
 	}
 });

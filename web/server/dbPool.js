@@ -1,15 +1,11 @@
-/**
- * Created by marcosgonzalez on 28/7/16.
- */
-
 import mongodb from 'mongodb';
 import Future from 'fibers/future';
 
-export default class DbPool {
+export class DbPool {
 
 	constructor(dbUri, poolSize){
 
-		this._databaseURI = dbUri || Meteor.settings.private.AFLConnectionString;
+		this._databaseURI = dbUri || Meteor.settings.private.connectionString;
 		this._poolSize = poolSize || Meteor.settings.private.dbPoolSize;
 		this._pool = [];
 		this._nextIndex = 0;
@@ -72,5 +68,6 @@ export default class DbPool {
 			throw new Meteor.Error('Error en la conexión a mongodb. No se pudo refrescar el socket');
 		}
 	}
-
 }
+
+export default new DbPool();
